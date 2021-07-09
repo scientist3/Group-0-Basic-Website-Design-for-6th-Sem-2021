@@ -50,39 +50,7 @@
       <div id="formFooter">
         <a class="underlineHover" href="#">Forgot Password?</a>
 
-        <?php
-        $userData = [
-          [
-            "username" => "ummer",
-            "password" => "abcd"
-          ],
-          [
-            "username" => "mirshahid",
-            "password" => "qwerty"
-          ]
-        ];
-
-        if (isset($_POST['username'])) {
-
-          $username = $_POST["username"];
-          $password = $_POST['password'];
-
-          $boolUserExists = false;
-
-          foreach ($userData as $user) {
-            if ($user["username"] == $username && $user["password"] == $password) {
-              $boolUserExists = true;
-            }
-          }
-
-          if ($boolUserExists) {
-            echo "User is logged in";
-            header("Location:./dashboard.php");
-          } else {
-            echo "<p>Username or password is incorrect!</p>";
-          }
-        }
-        ?>
+        <?php include("./process-sign-in"); ?>
       </div>
 
     </div>

@@ -11,8 +11,9 @@
 
 <body>
   <div class="container">
-    <!-- A grey horizontal navbar that becomes vertical on small screens -->
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <!-- Brand -->
+      <a class="navbar-brand" href="#">Logo</a>
 
       <!-- Links -->
       <ul class="navbar-nav">
@@ -22,39 +23,40 @@
         <li class="nav-item">
           <a class="nav-link" href="#">Link 2</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link 3</a>
+
+        <!-- Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+            Dropdown link
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Link 1</a>
+            <a class="dropdown-item" href="#">Link 2</a>
+            <a class="dropdown-item" href="#">Link 3</a>
+          </div>
         </li>
       </ul>
-
     </nav>
+
     <div class="row">
-      <div class="col-6">
-        <form action="/action_page.php">
+      <div class="col-sm-12 col-md-6 col-xl-6 offset-md-3">
+        <h3 class="text-center">Login Page</h3>
+        <form action="./process-sign-in.php" method="post">
           <div class="form-group">
             <label for="email">Email address:</label>
-            <input type="email" class="form-control" placeholder="Enter email" id="email">
+            <input type="email" name="email" class="form-control" placeholder="Enter email" id="email">
           </div>
           <div class="form-group">
             <label for="pwd">Password:</label>
-            <input type="password" class="form-control" placeholder="Enter password" id="pwd">
+            <input type="password" name="password" class="form-control" placeholder="Enter password" id="pwd">
           </div>
-          <div class="form-group form-check">
-            <label class="form-check-label">
-              <input class="form-check-input" type="checkbox"> Remember me
-            </label>
-          </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="submit" class="btn btn-primary" name="signInBtn">Sign In</button>
         </form>
       </div>
-      <div class="col-6">
-        <div class="jumbotron">
-          <h1>Bootstrap Tutorial</h1>
-          <p>Bootstrap is the most popular HTML, CSS...</p>
-        </div>
-      </div>
-    </div>
+      <?php
 
+      ?>
+    </div>
   </div>
 </body>
 
