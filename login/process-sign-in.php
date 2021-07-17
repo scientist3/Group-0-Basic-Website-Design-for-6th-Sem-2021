@@ -16,17 +16,6 @@ $sql = "SELECT * FROM user_tbl";
 
 $result = $conn->query($sql);
 
-$data = $result->fetch_assoc();
-$data1 = $result->fetch_assoc();
-
-echo "<pre>";
-print_r($result);
-print_r($data);
-print_r($data1);
-echo $data1['first_name'];
-exit();
-echo "</pre>";
-
 if (isset($_POST['signInBtn'])) {
 
   $email = $_POST["email"];
@@ -34,17 +23,18 @@ if (isset($_POST['signInBtn'])) {
 
   $boolUserExists = false;
 
-  foreach ($userData as $user) {
-    if ($user["email"] == $email && $user["password"] == $password) {
+  while ($row = $result->fetch_assoc()) {
+    if ($row['email'] == $email && $row['password'] == $password) {
       $boolUserExists = true;
+      break;
     }
   }
 
   if ($boolUserExists) {
-    //echo "User is logged in";
-    header("Location:./dashboard.php");
+    echo "User is logged in";
+    header("Location:../dashboard/dashboard.php");
   } else {
-    header("Location:./login-bootstrap.php");
-    //echo "<p class='error'>Username or password is incorrect!</pre>";
+    //header("Location:./login-bootstrap.php");
+    echo "<p class='error'>Username or password is incorrect!</pre>";
   }
 }
