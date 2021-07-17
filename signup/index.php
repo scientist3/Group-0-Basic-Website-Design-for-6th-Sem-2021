@@ -50,6 +50,7 @@
       </div>
       <?php include("../right-sidebar.php"); ?>
     </div>
+
   </div>
 </body>
 

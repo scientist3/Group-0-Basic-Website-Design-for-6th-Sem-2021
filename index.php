@@ -67,6 +67,29 @@
             Step to uses phpmyadmin:
               - localhost/phpmyadmin
 
+            Database management
+              - Connect with database:
+                - 
+              - SQL Quires:
+                - Read data form the database.
+                - Insert data into the database.
+                - Update data in the database.
+                - Delete data form the database.
+              Types of SQL Commands:
+                DDL:
+                  - all those SQL commands which are manipultes the database/ tables/ columns.
+                  CREATE: 
+                  ALTER:
+                DML:
+                  - all those commands which allows us to maniplute the data stored in the database.
+
+                  SELECT:
+                  INSERT:
+                  UPDATE:
+                  DELETE:
+
+                TCL/DCL:
+                  
             </pre>
           </div>
         </div>

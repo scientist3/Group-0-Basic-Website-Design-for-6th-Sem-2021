@@ -1,17 +1,30 @@
 <?php
-$userData = [
-  [
-    "email" => "ummer@gamil.com",
-    "password" => "ummer"
-  ],
-  [
-    "email" => "ms@gmail.com",
-    "password" => "ms"
-  ]
-];
+// $userData = [
+//   [
+//     "email" => "ummer@gamil.com",
+//     "password" => "ummer"
+//   ],
+//   [
+//     "email" => "ms@gmail.com",
+//     "password" => "ms"
+//   ]
+// ];
+
+include("../dbconnect/db_connect.php");
+
+$sql = "SELECT * FROM user_tbl";
+
+$result = $conn->query($sql);
+
+$data = $result->fetch_assoc();
+$data1 = $result->fetch_assoc();
 
 echo "<pre>";
-print_r($_REQUEST);
+print_r($result);
+print_r($data);
+print_r($data1);
+echo $data1['first_name'];
+exit();
 echo "</pre>";
 
 if (isset($_POST['signInBtn'])) {
