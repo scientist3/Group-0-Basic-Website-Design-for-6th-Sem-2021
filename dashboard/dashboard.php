@@ -5,7 +5,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../assets/css/bootstrap_4.css">
+  <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="../assets/fontawesome/font-awesome.css">
+  <!-- 82e279e7bb -->
+  <script src="https://kit.fontawesome.com/82e279e7bb.js" crossorigin="anonymous"></script>
   <title>Dashboard</title>
 </head>
 
@@ -65,5 +68,8 @@
       </div>
     </div>
 </body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+
 
 </html>
